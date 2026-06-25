@@ -79,7 +79,9 @@ export default function NavBar({ isOpen, toggleMobileMenu }: NavBarProps) {
                                 className={`nav-link transition-colors duration-200 ${
                                     activeSection === link.href 
                                         ? "text-cyan-400" 
-                                        : "hover:text-cyan-400"
+                                        : activeSection !== link.href
+                                        ? " text-gray-400" 
+                                        : ""
                                 }`}
                             >
                                 {link.label}
