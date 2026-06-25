@@ -15,7 +15,7 @@ export default function NavBar({ isOpen, toggleMobileMenu }: NavBarProps) {
     // Scroll suave + Offset (para não ficar atrás da navbar fixa)
     const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
-        
+
         const targetElement = document.getElementById(targetId);
         if (!targetElement) return;
 
@@ -42,9 +42,9 @@ export default function NavBar({ isOpen, toggleMobileMenu }: NavBarProps) {
                     }
                 });
             },
-            { 
+            {
                 threshold: 0.5,
-                rootMargin: "-80px 0px -20% 0px" 
+                rootMargin: "-80px 0px -20% 0px"
             }
         );
 
@@ -66,9 +66,12 @@ export default function NavBar({ isOpen, toggleMobileMenu }: NavBarProps) {
         <>
             <nav className="fixed top-0 w-full bg-slate-950/80 backdrop-blur-md z-50 border-b border-slate-800">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-                    <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
-                        Packlor
-                    </div>
+                    <a href="https://services.packlor.com/">
+                        <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-violet-500 bg-clip-text text-transparent">
+                            Packlor
+                        </div>
+                    </a>
+
 
                     <div className="hidden md:flex gap-8 text-sm font-medium">
                         {navLinks.map((link) => (
@@ -76,13 +79,12 @@ export default function NavBar({ isOpen, toggleMobileMenu }: NavBarProps) {
                                 key={link.href}
                                 href={`#${link.href}`}
                                 onClick={(e) => handleSmoothScroll(e, link.href)}
-                                className={`nav-link transition-colors duration-200 ${
-                                    activeSection === link.href 
-                                        ? "text-cyan-400" 
+                                className={`nav-link transition-colors duration-200 ${activeSection === link.href
+                                        ? "text-cyan-400"
                                         : activeSection !== link.href
-                                        ? " text-gray-400" 
-                                        : ""
-                                }`}
+                                            ? " text-gray-400"
+                                            : ""
+                                    }`}
                             >
                                 {link.label}
                             </a>

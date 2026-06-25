@@ -1,6 +1,12 @@
 const projects = [
   {
-    title: "Site Institucional",
+    title: "Packlor • Web App",
+    stack: "Github + Python + squarecloud",
+    image: "/images/caderno.png",
+    link: "https://packlor.com/",
+  },
+  {
+    title: "Site Institucional - Cuesta Caçamba",
     stack: "Next.js + Cloudflare + Vercel",
     image: "/images/cuesta.png",
     link: "https://www.cuestacacamba.com.br/",
