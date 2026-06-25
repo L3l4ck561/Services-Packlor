@@ -1,10 +1,7 @@
 'use client';
 
-import { FaBars } from "react-icons/fa";
-import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
 import ClientsMarquee from "@/components/Client";
-import Image from "next/image";
 
 interface HeaderProps {
   isOpen: boolean;

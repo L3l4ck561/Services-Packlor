@@ -4,12 +4,12 @@ import { FaBars } from "react-icons/fa";
 import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
 
-interface HeaderProps {
+interface NavBarProps {
     isOpen: boolean;
     toggleMobileMenu: () => void;
 }
 
-export default function Header({ isOpen, toggleMobileMenu }: HeaderProps) {
+export default function NavBar({ isOpen, toggleMobileMenu }: NavBarProps) {
     const [activeSection, setActiveSection] = useState("home");
 
     // Scroll suave + Offset (para não ficar atrás da navbar fixa)

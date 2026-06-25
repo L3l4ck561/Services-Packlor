@@ -1,12 +1,12 @@
 'use client';
 
 import { useState } from "react";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,16 +15,14 @@ export default function Home() {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    return (
+    return (<>
+        <NavBar isOpen={isMenuOpen} toggleMobileMenu={toggleMobileMenu} />
         <main className="bg-slate-950 text-slate-200 min-h-screen">
-            <Header isOpen={isMenuOpen} toggleMobileMenu={toggleMobileMenu} />
-            
-            <Hero />
+            <Hero isOpen={isMenuOpen} toggleMobileMenu={toggleMobileMenu} />
             <Services />
             <About />
             <Portfolio />
             <Contact />
-            
         </main>
-    );
+    </>);
 }
