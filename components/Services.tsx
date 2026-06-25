@@ -1,5 +1,6 @@
-import { FaCode, FaVial, FaCogs, IconType } from "react-icons/fa";
+import { FaCode, FaVial, FaCogs } from "react-icons/fa";
 import { ReactNode } from "react";
+import { IconType } from "react-icons";
 
 interface Service {
   id: number;
