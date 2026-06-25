@@ -52,12 +52,6 @@ export default function Hero({ isOpen, toggleMobileMenu }: HeroProps) {
       id="home"
       className="hero-bg min-h-screen flex items-center pt-20 pb-12 relative overflow-hidden"
     >
-      {/* Fundo animado - visível apenas no mobile */}
-      <div className="absolute inset-0 md:hidden z-0">
-        <div className="">
-          <div className="w-[100vh] h-full container"/>
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
