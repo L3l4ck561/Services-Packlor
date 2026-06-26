@@ -8,6 +8,7 @@ interface Client {
 
 const clients: Client[] = [
     { name: "Cuesta Caçamba", logo: "https://cuesta-cacamba.vercel.app/images/logo3.svg", width: 140 },
+    { name: "Alpes Da Castelo", logo: "https://alpesdacastelo.com.br/wp-content/uploads/2023/10/Logo-Alpes-56295x15418px-300x82.png", width: 140 },
 
     // Adicione quantos quiser aqui
 ];
